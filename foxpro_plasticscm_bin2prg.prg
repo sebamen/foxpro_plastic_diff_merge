@@ -217,7 +217,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 
 					*-- REGENERO EL BINARIO Y RECOMPILO
 					.writeLog( '- Regenerando texto para archivo: ' + tcSourcePath )
-					loFB2P.Ejecutar( tcSourcePath, '', '', '', '1', '1', '1', '', '', .T., '', '1' )
+					loFB2P.Ejecutar( tcSourcePath, '', '', '', '1', '1', '1', '', '', .T., '', '1', '1' )
 				ELSE
 					.writeLog( '- Salteado por reglas internas' )
 				ENDIF

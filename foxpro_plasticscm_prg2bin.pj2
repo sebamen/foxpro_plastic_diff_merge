@@ -50,8 +50,8 @@ MODIFY PROJECT 'foxpro_plasticscm_prg2bin.pjx' NOWAIT NOSHOW NOPROJECTHOOK
 loProject = _VFP.Projects('foxpro_plasticscm_prg2bin.pjx')
 
 WITH loProject.FILES
-	.ADD('config\config.fpw')		&& *< FileMetadata: Type="T" Cpid="1252" Timestamp="1133683549" ID="1144494450" ObjRev="0" />
-	.ADD('foxpro_plasticscm_prg2bin.prg')		&& *< FileMetadata: Type="P" Cpid="1252" Timestamp="1144550006" ID="1144494450" ObjRev="544" />
+	.ADD('config\config.fpw')		&& *< FileMetadata: Type="T" Cpid="1252" Timestamp="0" ID="1144494450" ObjRev="0" />
+	.ADD('foxpro_plasticscm_prg2bin.prg')		&& *< FileMetadata: Type="P" Cpid="1252" Timestamp="0" ID="1144494450" ObjRev="544" />
 	*</BuildProj>
 
 	.ITEM('__newproject.f2b').Remove()

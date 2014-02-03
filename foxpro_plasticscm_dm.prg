@@ -482,7 +482,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 						*-- REGENERO EL BINARIO Y RECOMPILO
 						IF INLIST( lcExt, loFB2P.c_VC2, loFB2P.c_SC2, loFB2P.c_FR2, loFB2P.c_LB2 )
 							.writeLog( '- Regenerando binario para archivo: ' + laStdIn(1,2) )
-							loFB2P.Ejecutar( laStdIn(1,2), '', '', '', '1', '1', '1', '', '', .T., '', lcWorkspaceDir )
+							loFB2P.Ejecutar( laStdIn(1,2), '', '', '', '1', '1', '1', '', '', .T., '', lcWorkspaceDir, '1', '1' )
 						ENDIF
 
 
@@ -781,7 +781,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 					ERROR "There was an error performing the diff operation."
 				ENDIF
 
-				lcSourcePathParsed	= ' "' + tcSourcePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+				lcSourcePathParsed	= ' "' + tcSourcePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 				lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcSourcePathParsed
 				lnCommandResult		= .RunCommand( lcCommand )
 
@@ -849,7 +849,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 					ERROR "There was an error performing the merge operation."
 				ENDIF
 
-				lcSourcePathParsed	= ' "' + tcSourcePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+				lcSourcePathParsed	= ' "' + tcSourcePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 				lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcSourcePathParsed
 				lnCommandResult		= .RunCommand( lcCommand )
 
@@ -923,7 +923,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 					ERROR "There was an error performing the merge operation."
 				ENDIF
 
-				lcBasePathParsed	= ' "' + tcBasePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+				lcBasePathParsed	= ' "' + tcBasePath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 				lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcBasePathParsed
 				lnCommandResult		= .RunCommand( lcCommand )
 
@@ -993,7 +993,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 						ERROR "There was an error performing the diff (rev) operation."
 					ENDIF
 
-					lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+					lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 					lcCommand				= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcDestinationPathParsed
 					lnCommandResult		= .RunCommand( lcCommand )
 
@@ -1004,7 +1004,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 					llNotInWorkspace	= .T.
 
 				ELSE
-					lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+					lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 					lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcDestinationPathParsed
 					lnCommandResult		= .RunCommand( lcCommand )
 
@@ -1050,7 +1050,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 				.writeLog( '---' + PADR( PROGRAM(),77, '-' ) )
 				lnCommandResult		= 0
 
-				lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '"'
+				lcDestinationPathParsed	= ' "' + tcDestinationPath + '" "0" "0" "0" "0" "0" "0" "' + tcWorkspaceFileName + '" "1" "1"'
 				lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '"' + lcDestinationPathParsed
 				lnCommandResult		= .RunCommand( lcCommand )
 
@@ -1313,7 +1313,7 @@ DEFINE CLASS CL_SCM_LIB AS SESSION
 				*.DeleteFile(lcDestinationPath_c)
 
 				*-- Regenera el BIN (PJX,VCX,SCX,etc)
-				lcResultPathParsed	= ' "' + CHRTRAN(tcTextMergeResult,'"','') + '" "0" "0" "0" "0" "0" "0" "' + tcDestinationPath + '"'
+				lcResultPathParsed	= ' "' + CHRTRAN(tcTextMergeResult,'"','') + '" "0" "0" "0" "0" "0" "0" "' + tcDestinationPath + '" "1" "1"'
 				lcCommand			= '"' + FORCEPATH( 'foxbin2prg.exe', .cEXEPath ) + '" ' + lcResultPathParsed
 				lnCommandResult		= .RunCommand( lcCommand )
 
