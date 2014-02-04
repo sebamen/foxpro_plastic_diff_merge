@@ -158,7 +158,7 @@ TRY
 		lcBasePath				= P06
 		lcBaseSymbolic			= P07
 		lcOutputPath			= P08
-		loTool.writeLog( 'Salteando archivo [' + tcSourcePath + ']' )
+		loTool.writeLog( 'Salteando archivo [' + TRANSFORM(lcSourcePath) + ']' )
 
 	OTHERWISE
 		loEx	= CREATEOBJECT("Exception")
