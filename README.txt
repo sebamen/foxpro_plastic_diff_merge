@@ -1,5 +1,7 @@
+Version v2.4
+
 ENGLISH ################################################################
-Visual FoxPro 9.0 Diff and Merge Tool v2.3 for PlasticSCM 5
+Visual FoxPro 9.0 Diff and Merge Tool for PlasticSCM 5
 2013/12/20 -  Created by Fernando D. Bozzo (fdbozzo@gmail.com)
 ########################################################################
 
@@ -47,10 +49,32 @@ Custom "Open with..." CONFIGURATION:
 ------------------------------------------------------------------------
 - Click on PlasticSCM Preferences icon
 - Select "Custom Open with..."
+
 - Click "Add..." and complete the fields:
      Display Name:                FoxBin2Prg
 	 Full path to the executable: <Path-To-FoxBin2Prg>\foxbin2prg.exe
 - Click OK
+
+- Click "Add..." and complete the fields:
+     Display Name:                (VFP) Pending Changes: Regenerate Text versions
+	 Full path to the executable: <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_Pending_Changes_Regenerate_Text.vbs
+- Click OK
+
+- Click "Add..." and complete the fields:
+     Display Name:                (VFP) Pending Changes: Regenerate Binaries
+	 Full path to the executable: <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_Pending_Changes_Regenerate_Binary.vbs
+- Click OK
+
+- Click "Add..." and complete the fields:
+     Display Name:                (VFP) All Files: Regenerate Binary
+	 Full path to the executable: <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_All_Files_Regenerate_Binary.vbs
+- Click OK
+
+- Click "Add..." and complete the fields:
+     Display Name:                (VFP) All Files: Regenerate Text versions
+	 Full path to the executable: <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_All_Files_Regenerate_Text.vbs
+- Click OK
+
 
 *Note 3: We will use this on the GUI as a trick to convert to text or to binary
 *Note 4: You can add Notepad++ too, it's useful to see text files directly from Plastic GUI
@@ -68,12 +92,12 @@ USE:
   binary, select them, right-click and select the option to keep the changes on "source" (don't
   mind about it, because later you need to regenerate all binaries anyway)
   
-- When Merge ends, you go to "Pending Changes" window, regenerate all binaries by selecting the text
-  version, right-click, and "Open / Open with..." FoxBin2Prg (one file at a time, or else Plastic
-  will throw all at the same time!)
+- When Merge ends, you go to "Pending Changes" window, regenerate all binaries by selecting any file
+  in the window, right-click and "Open / Open with... (VFP) Pending Changes: Regenerate Binaries"
   
 - Finally, checkin and this ends the merging operation  
 
+- Note: You always have the chance to convert a specific file to binary or text with FoxBin2Prg option.
 
 
 ABOUT FOXBIN2PRG 2-WAY CONVERTER POR VFP 9:
@@ -99,7 +123,7 @@ To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0
 
 
 ESPAÑOL ################################################################
-Herramienta de Diff y Merge v2.3 en Visual FoxPro 9.0 para PlasticSCM 5
+Herramienta de Diff y Merge en Visual FoxPro 9.0 para PlasticSCM 5
 2013/12/20 -  Creado por Fernando D. Bozzo (fdbozzo@gmail.com)
 ########################################################################
 
@@ -148,12 +172,33 @@ CONFIGURACIÓN DE MERGE EN PLASTICSCM:
 
 CONFIGURACIÓN DE Custom "Open with...":
 ------------------------------------------------------------------------
-- Click on PlasticSCM Preferences icon
-- Select "Custom Open with..."
-- Click "Add..." and complete the fields:
-     Display Name:                FoxBin2Prg
-	 Full path to the executable: <Path-To-FoxBin2Prg>\foxbin2prg.exe
-- Click OK
+- Click en el icono de Preferencias de PlasticSCM
+- Seleccionar "Abrir con... personalizado"
+
+- Click en "Añadir..." y completar los campos:
+     Nombre a mostrar:                FoxBin2Prg
+	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\foxbin2prg.exe
+- Click en Aceptar
+
+- Click en "Añadir..." y completar los campos:
+     Nombre a mostrar:                (VFP) Cambios Pendientes: Regenerar versiones Texto
+	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_Pending_Changes_Regenerate_Text.vbs
+- Click en Aceptar
+
+- Click en "Añadir..." y completar los campos:
+     Nombre a mostrar:                (VFP) Cambios Pendientes: Regenerar Binarios
+	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_Pending_Changes_Regenerate_Binary.vbs
+- Click en Aceptar
+
+- Click en "Añadir..." y completar los campos:
+     Nombre a mostrar:                (VFP) Todos los Archivos: Regenerar Binarios
+	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_All_Files_Regenerate_Binary.vbs
+- Click en Aceptar
+
+- Click en "Añadir..." y completar los campos:
+     Nombre a mostrar:                (VFP) Todos los Archivos: Regenerar versiones Texto
+	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\PlasticSCM_VFP9_All_Files_Regenerate_Text.vbs
+- Click en Aceptar
 
 *Nota 3: Usaremos esto desde la interfaz como truco para convertir a texto o a binario
 *Nota 4: También puede agregar Notepad++, es útil para ver archivos de texto desde la interfaz de Plastic
@@ -174,10 +219,12 @@ USO:
   volverá a regenerar a todos)
 
 - Cuando el Merge termine, vaya a la ventana de "Cambios Pendientes", regenere todos los binarios
-  seleccionando las versiones texto, haga click-derecho sobre los mismos y elija "Abrir / Abrir con..." FoxBin2Prg
-  (¡de a uno, que si no Plastic los lanzará todos a la vez!)
+  seleccionando un archivo cualquiera de la ventana, click-derecho y elija
+  "Abrir / Abrir con... (VFP) Cambios Pendientes: Regenerar Binarios"
 
 - Finalmente, haga el checkin y con esto termina la operación de merge
+
+- Siempre tendrá la posibilidad de convertir un archivo específico a binario o texto con la opción de FoxBin2Prg
 
   
 
