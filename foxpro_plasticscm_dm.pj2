@@ -25,8 +25,8 @@ _LegalCopyright = "Open Source -  LICENCIA Creative Commons:	Reconocimiento - Co
 _LegalTrademark = "Open Source"
 _ProductName = "FOXPRO_PLASTIC_DM"
 _MajorVer = "2"
-_MinorVer = "3"
-_Revision = " 118"
+_MinorVer = "4"
+_Revision = " 121"
 _LanguageID = "1034"
 _AutoIncrement = "1"
 *</DevInfo>
@@ -51,7 +51,7 @@ loProject = _VFP.Projects('foxpro_plasticscm_dm.pjx')
 
 WITH loProject.FILES
 	.ADD('config\config.fpw')		&& *< FileMetadata: Type="T" Cpid="1252" Timestamp="1133683549" ID="1134212373" ObjRev="0" />
-	.ADD('foxpro_plasticscm_dm.prg')		&& *< FileMetadata: Type="P" Cpid="1252" Timestamp="1145349526" ID="1133860424" ObjRev="544" />
+	.ADD('foxpro_plasticscm_dm.prg')		&& *< FileMetadata: Type="P" Cpid="1252" Timestamp="1145541596" ID="1133860424" ObjRev="544" />
 	*</BuildProj>
 
 	.ITEM('__newproject.f2b').Remove()
