@@ -101,7 +101,7 @@ DEFINE CLASS CL_SCM_2_LIB AS CL_SCM_LIB OF 'FOXPRO_PLASTICSCM_DM.EXE'
 				toEx		= NULL
 
 				*-- FILTRO LAS EXTENSIONES PERMITIDAS (EXCLUYO LOS DBFs Y DBCs)
-				IF INLIST( lcExt, 'PJX', 'VCX', 'SCX', 'FRX', 'LBX' )
+				IF INLIST( lcExt, 'PJX', 'VCX', 'SCX', 'FRX', 'LBX', 'MNX' )
 					IF NOT llPreInit
 						.writeLog( TTOC(DATETIME()) + '  ---' + PADR( PROGRAM(),77, '-' ) )
 					ENDIF
