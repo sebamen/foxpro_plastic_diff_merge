@@ -6,6 +6,8 @@ Visual FoxPro 9.0 Diff and Merge Tool for PlasticSCM 5
 ########################################################################
 
 Download at: https://github.com/fdbozzo/foxpro_plastic_diff_merge
+Demo video: http://youtu.be/sE4wQ50Itqg
+
 
 WHAT IS THIS TOOL AND HOW TO USE IT?
 ------------------------------------------------------------------------
@@ -22,10 +24,9 @@ DIFF CONFIGURATION ON PLASTICSCM:
 - Select "Diff Tools"
 - For each binary FoxPro extension* "add" this:
 	- External Diff Tool: "<path>\foxpro_plasticscm_dm.exe" "'DIFF' '@sourcefile' '@destinationfile' '@sourcesymbolic' '@destinationsymbolic'"
-	- Pattern: .pjx     (use lowercase!)
+	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (use lowercase!)
 - Click OK
 - Move the added extension to the top of the list, to prioritize it
-- Repeat this operation for each supported extension (*Note 1)
 
 *Note 1: Supported extensions are: pjx,vcx,scx,frx,lbx,mnx,dbf,dbc
 
@@ -37,9 +38,8 @@ MERGE CONFIGURATION ON PLASTICSCM:
 - Select "Merge Tools"
 - For each binary FoxPro extension* "add" this:
 	- External Merge Tool: "<path>\foxpro_plasticscm_dm.exe" "'PRESERVE_WS'"
-	- Pattern: .pjx     (use lowercase!)
+	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (use lowercase!)
 - Click OK
-- Repeat this operation for each Visual FoxPro binary extension (* Note 2)
 
 * Note 2: Visual FoxPro binary extension are: pjx,pjt,vcx,vct,scx,sct,frx,frt,lbx,lbt,mnx,mnt,dbf,fpt,cdx,dbc,dcx,dct
 
@@ -128,7 +128,7 @@ Herramienta de Diff y Merge en Visual FoxPro 9.0 para PlasticSCM 5
 ########################################################################
 
 Descargar de: https://github.com/fdbozzo/foxpro_plastic_diff_merge
-
+Video demostración: http://youtu.be/sE4wQ50Itqg
 
 
 ¿QUÉ ES ESTA HERRAMIENTA Y CÓMO SE USA?
@@ -146,10 +146,9 @@ CONFIGURACIÓN DE DIFF EN PLASTICSCM:
 - Seleccionar "Herramientas Diff"
 - Para cada extensión* binaria FoxPro "agregar" esto:
 	- Herramienta Diff externa: "<path>\foxpro_plasticscm_dm.exe" "'DIFF' '@sourcefile' '@destinationfile' '@sourcesymbolic' '@destinationsymbolic'"
-	- Pattern: .pjx     (¡usar misúsculas!)
+	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (¡usar misúsculas!)
 - Clickear OK
 - Mover la extension agregada al inicio de la lista, para priorizarla
-- Repetir esta operación para cada extensión binaria soportada (*Nota 1)
 
 *Nota 1: Las extensiones soportadas son: pjx,vcx,scx,frx,lbx,mnx,dbf,dbc
 
@@ -161,10 +160,9 @@ CONFIGURACIÓN DE MERGE EN PLASTICSCM:
 - Seleccionar "Herramientas Merge"
 - Para cada extensión* binaria FoxPro "agregar" esto:
 	- Herramienta Merge externa: "<path>\foxpro_plasticscm_dm.exe" "'PRESERVE_WS'"
-	- Pattern: .pjx     (¡usar misúsculas!)
+	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (¡usar misúsculas!)
 - Clickear OK
 - Mover la extension agregada al inicio de la lista, para priorizarla
-- Repetir esta operación para cada extensión binaria soportada (*Nota 2)
 
 *Nota 2: Visual FoxPro binary extension are: pjx,pjt,vcx,vct,scx,sct,frx,frt,lbx,lbt,mnx,mnt,dbf,fpt,cdx,dbc,dcx,dct
 
