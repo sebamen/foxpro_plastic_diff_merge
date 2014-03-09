@@ -7,6 +7,7 @@ Visual FoxPro 9.0 Diff and Merge Tool for PlasticSCM 5
 
 Download at: https://github.com/fdbozzo/foxpro_plastic_diff_merge
 Demo video: http://youtu.be/sE4wQ50Itqg
+Blog: http://fdbozzo.blogspot.com.es/
 
 
 WHAT IS THIS TOOL AND HOW TO USE IT?
@@ -21,8 +22,7 @@ bidirectional binary-text converter (FoxBin2prg.exe)
 DIFF CONFIGURATION ON PLASTICSCM:
 ------------------------------------------------------------------------
 - Click on PlasticSCM Preferences icon
-- Select "Diff Tools"
-- For each binary FoxPro extension* "add" this:
+- Select "Diff Tools" and "add" this (including the quotes):
 	- External Diff Tool: "<path>\foxpro_plasticscm_dm.exe" "'DIFF' '@sourcefile' '@destinationfile' '@sourcesymbolic' '@destinationsymbolic'"
 	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (use lowercase!)
 - Click OK
@@ -35,8 +35,7 @@ DIFF CONFIGURATION ON PLASTICSCM:
 MERGE CONFIGURATION ON PLASTICSCM:
 ------------------------------------------------------------------------
 - Click on PlasticSCM Preferences icon
-- Select "Merge Tools"
-- For each binary FoxPro extension* "add" this:
+- Select "Merge Tools" and "add" this (including the quotes):
 	- External Merge Tool: "<path>\foxpro_plasticscm_dm.exe" "'PRESERVE_WS'"
 	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (use lowercase!)
 - Click OK
@@ -53,6 +52,11 @@ Custom "Open with..." CONFIGURATION:
 - Click "Add..." and complete the fields:
      Display Name:                FoxBin2Prg
 	 Full path to the executable: <Path-To-FoxBin2Prg>\foxbin2prg.exe
+- Click OK
+
+- Click "Add..." and complete the fields:
+     Display Name:                Normalize File Capitalization
+	 Full path to the executable: <Path-To-FoxBin2Prg>\Normalize_FileNames.vbs
 - Click OK
 
 - Click "Add..." and complete the fields:
@@ -78,6 +82,11 @@ Custom "Open with..." CONFIGURATION:
 
 *Note 3: We will use this on the GUI as a trick to convert to text or to binary
 *Note 4: You can add Notepad++ too, it's useful to see text files directly from Plastic GUI
+*Note 5: It's a good idea to create shortcuts of this programs: "Normalize_FileNames.vbs",
+		"Convert_VFP9_BIN_2_PRG.vbs", "Convert_VFP9_PRG_2_BIN.vbs" and "FoxBin2Prg.exe" and copy theese
+		acceses into "SendTo" folder of your Windows profile, so you can use this options
+		from contextual Windows File Manager menu, right-clicking over a selected file or directory
+		and choosing the required option
 
 
 
@@ -129,6 +138,7 @@ Herramienta de Diff y Merge en Visual FoxPro 9.0 para PlasticSCM 5
 
 Descargar de: https://github.com/fdbozzo/foxpro_plastic_diff_merge
 Video demostración: http://youtu.be/sE4wQ50Itqg
+Blog: http://fdbozzo.blogspot.com.es/
 
 
 ¿QUÉ ES ESTA HERRAMIENTA Y CÓMO SE USA?
@@ -143,8 +153,7 @@ de binarios-texto bidireccional (FoxBin2prg.exe)
 CONFIGURACIÓN DE DIFF EN PLASTICSCM:
 ------------------------------------------------------------------------
 - Clickear en el icono de Preferencias de PlasticSCM
-- Seleccionar "Herramientas Diff"
-- Para cada extensión* binaria FoxPro "agregar" esto:
+- Seleccionar "Herramientas Diff" y "agregar" esto:
 	- Herramienta Diff externa: "<path>\foxpro_plasticscm_dm.exe" "'DIFF' '@sourcefile' '@destinationfile' '@sourcesymbolic' '@destinationsymbolic'"
 	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (¡usar misúsculas!)
 - Clickear OK
@@ -157,8 +166,7 @@ CONFIGURACIÓN DE DIFF EN PLASTICSCM:
 CONFIGURACIÓN DE MERGE EN PLASTICSCM:
 ------------------------------------------------------------------------
 - Clickear en el icono de Preferencias de PlasticSCM
-- Seleccionar "Herramientas Merge"
-- Para cada extensión* binaria FoxPro "agregar" esto:
+- Seleccionar "Herramientas Merge" y "agregar" esto:
 	- Herramienta Merge externa: "<path>\foxpro_plasticscm_dm.exe" "'PRESERVE_WS'"
 	- Pattern: .pjx;.vcx;.scx;.frx;.lbx;.mnx;.dbf;.dbc     (¡usar misúsculas!)
 - Clickear OK
@@ -177,6 +185,11 @@ CONFIGURACIÓN DE Custom "Open with...":
      Nombre a mostrar:                FoxBin2Prg
 	 Ruta completa del ejecutable:    <Path-To-FoxBin2Prg>\foxbin2prg.exe
 - Click en Aceptar
+
+- Click en "Añadir..." y completar los campos:
+     Display Name:                Normalizar Capitalización de un archivo
+	 Full path to the executable: <Path-To-FoxBin2Prg>\Normalize_FileNames.vbs
+- Click OK
 
 - Click en "Añadir..." y completar los campos:
      Nombre a mostrar:                (VFP) Cambios Pendientes: Regenerar versiones Texto
@@ -200,6 +213,11 @@ CONFIGURACIÓN DE Custom "Open with...":
 
 *Nota 3: Usaremos esto desde la interfaz como truco para convertir a texto o a binario
 *Nota 4: También puede agregar Notepad++, es útil para ver archivos de texto desde la interfaz de Plastic
+*Nota 5: Es conveniente crear accesos directos de los programas "Normalize_FileNames.vbs",
+		"Convert_VFP9_BIN_2_PRG.vbs", "Convert_VFP9_PRG_2_BIN.vbs" y "FoxBin2Prg.exe" y copiar estos
+		accesos en la carpeta "SendTo" del perfil de vuestro usuario, para poder usar estas opciones
+		desde el menú contextual del administrador de archivos de Windows, pudiendo hacer
+		click-derecho sobre un archivo o directorio y eligiendo la opción requerida
 
 
 
